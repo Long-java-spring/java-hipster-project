@@ -1,0 +1,16 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+version: '3.8'
+services:
+  manager-postgresql:
+    image: postgres:14.5
+    # volumes:
+    #   - ~/volumes/jhipster/manager/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_ROOT_PASSWORD=289318a@
+      - POSTGRES_DB=manager
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=289318a@
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 5432:5432
